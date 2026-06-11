@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TruckIcon, XIcon } from "lucide-react";
+import { TruckIcon, XIcon, ZapIcon } from "lucide-react";
 
 const Banner = () => {
   const [bannerVisible, setBannerVisible] = useState(() => {
@@ -18,6 +18,11 @@ const Banner = () => {
             <div className="flex-center gap-2">
               <TruckIcon className="size-4 shrink-0" />
               <span>Free delivery on orders over ₹100</span>
+            </div>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <div className="hidden sm:flex items-center gap-2">
+              <ZapIcon className="size-3.5 fill-yellow-400 text-yellow-400 shrink-0" />
+              <span>Farm-fresh produce delivered to your doorstep daily</span>
             </div>
           </div>
 
