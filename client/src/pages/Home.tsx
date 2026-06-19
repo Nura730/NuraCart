@@ -1,5 +1,13 @@
+import Hero from "../components/Home/Hero"
+import Features from "../components/Home/Features";
+import HomeCategories from "../components/Home/HomeCategories";
 const Home = () => {
-  return <div>Home</div>;
+  return <div className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <Hero />
+    <Features />
+    <HomeCategories />
+  </div>;
 };
 
 export default Home;
