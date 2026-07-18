@@ -4,6 +4,7 @@ import { BikeIcon, ChevronDownIcon } from "lucide-react";
 import { SearchIcon } from "lucide-react";
 import { ShoppingCartIcon } from "lucide-react";
 import { UserIcon, XIcon, MenuIcon, PackageIcon, MapPinIcon, ArrowUpRightIcon, ShieldIcon, LogOutIcon} from "lucide-react";
+import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
   const user: any = {
@@ -12,10 +13,7 @@ const Navbar = () => {
     isAdmin: true,
   };
 
-  const { cartCount, setIsCartOpen } = {
-    cartCount: 5,
-    setIsCartOpen: (_data: any) => {},
-  };
+  const { cartCount, setIsCartOpen } = useCart()
 
   const [searchQuery, setSearchQuery] = useState("");
   const [userMenuOpen, setUserMenuOpen] = useState(false);
