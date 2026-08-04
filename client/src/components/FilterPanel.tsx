@@ -24,13 +24,13 @@ const FilterPanel = ({categories, category, minPrice, maxPrice, updateFilter, cl
         <input type="number" 
         placeholder="Min" 
         value={minPrice} onChange={(e)=> updateFilter('minPrice',e.target.value)} 
-        className="w-full px-3 py-2 text-sm bg-white rounded-lg border not-focus:border-app-border" />
+        className="w-full px-3 py-2 text-sm bg-white rounded-lg border border-app-border focus:border-app-green focus:outline-none" />
         <span className="text-app-text-light">-</span>
 
         <input type="number" 
         placeholder="Max" 
         value={maxPrice} onChange={(e)=> updateFilter('maxPrice',e.target.value)} 
-        className="w-full px-3 py-2 text-sm bg-white rounded-lg border not-focus:border-app-border" />
+        className="w-full px-3 py-2 text-sm bg-white rounded-lg border border-app-border focus:border-app-green focus:outline-none" />
 
     </div>
 </div>

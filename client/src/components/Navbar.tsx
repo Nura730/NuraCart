@@ -123,33 +123,32 @@ const Navbar = () => {
                   <div
                     className="fixed inset-0 z-40"
                     onClick={() => setUserMenuOpen(false)}
-                  >
-                    <div className="absolute right-0 mt-2.5 w-56 bg-white rounded-xl shadow-lg border border-app-border py-2 z-50 animate-fade-in">
-                        {user && (
-                            <div className="px-4 py-2 border-b border-app-border">
-                                <p className="text-sm font-medium text-zinc-900">{user?.name}</p>
-                                <p className="text-xs text-zinc-500">{user?.email}</p>
-                            </div>
-                        )}
-                        <div onClick={()=> setUserMenuOpen(false)}>
-                            {!user && <Link to='/login' className="dropdown-link"><UserIcon size={16}/>Sign In</Link>}
+                  />
+                  <div className="absolute right-0 mt-2.5 w-56 bg-white rounded-xl shadow-lg border border-app-border py-2 z-50 animate-fade-in">
+                      {user && (
+                          <div className="px-4 py-2 border-b border-app-border">
+                              <p className="text-sm font-medium text-zinc-900">{user?.name}</p>
+                              <p className="text-xs text-zinc-500">{user?.email}</p>
+                          </div>
+                      )}
+                      <div onClick={()=> setUserMenuOpen(false)}>
+                          {!user && <Link to='/login' className="dropdown-link"><UserIcon size={16}/>Sign In</Link>}
 
-                            {user && <Link to='/orders' className="dropdown-link"><PackageIcon size={16}/>My Orders</Link>}
-                            {user && <Link to='/addresses' className="dropdown-link"><MapPinIcon size={16}/>Addresses</Link>}
-                            <Link to='/products' className="dropdown-link md:hidden"><ArrowUpRightIcon size={16}/>Products</Link>
-                            <Link to='/deals' className="dropdown-link"><ArrowUpRightIcon size={16}/>Deals</Link>
-                            {user?.isAdmin && (
-                                <Link to='/admin/products' className="dropdown-link"><ShieldIcon className="text-app-orange-dark" size={16}/><span className="text-app-orange-dark">Admin Panel</span></Link>
-                            )}
-                            {user && (
-                                <div className="border-t border-app-border pt-1">
-                                    <button onClick={handleLogout} className="flex items-center gap-3 px-4 py-2.5 text-sm text-app-error hover:bg-red-50 w-full transition-colors">
-                                        <LogOutIcon size={16}/>Logout
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                          {user && <Link to='/orders' className="dropdown-link"><PackageIcon size={16}/>My Orders</Link>}
+                          {user && <Link to='/addresses' className="dropdown-link"><MapPinIcon size={16}/>Addresses</Link>}
+                          <Link to='/products' className="dropdown-link md:hidden"><ArrowUpRightIcon size={16}/>Products</Link>
+                          <Link to='/deals' className="dropdown-link"><ArrowUpRightIcon size={16}/>Deals</Link>
+                          {user?.isAdmin && (
+                              <Link to='/admin/products' className="dropdown-link"><ShieldIcon className="text-app-orange-dark" size={16}/><span className="text-app-orange-dark">Admin Panel</span></Link>
+                          )}
+                          {user && (
+                              <div className="border-t border-app-border pt-1">
+                                  <button onClick={handleLogout} className="flex items-center gap-3 px-4 py-2.5 text-sm text-app-error hover:bg-red-50 w-full transition-colors">
+                                      <LogOutIcon size={16}/>Logout
+                                  </button>
+                              </div>
+                          )}
+                      </div>
                   </div>
                 </>
               )}

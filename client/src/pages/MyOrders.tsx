@@ -19,7 +19,9 @@ const MyOrders = () => {
   const { clearCart } = useCart();
 
   const fetchOrders = async () => {
-    setOrders(dummyDashboardOrdersData as any);
+    const savedOrders = localStorage.getItem("app_orders");
+    const localOrders = savedOrders ? JSON.parse(savedOrders) : [];
+    setOrders([...localOrders, ...dummyDashboardOrdersData] as any);
     setLoading(false);
   };
 
@@ -114,7 +116,7 @@ const MyOrders = () => {
                   </div>
                 </div>
 
-                {/*Item Thumbnail*/}
+                {/*Item Thumbnail*/} 
                 <div className="flex items-center gap-2 mb-3">
                   {order.items.slice(0, 4).map((item, i) => (
                     <img

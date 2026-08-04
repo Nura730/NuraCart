@@ -10,7 +10,7 @@ import FilterPanel from "../components/FilterPanel";
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [products, setProducts] = useState<Product[]>([])
-  const [totalPages, setTotal] = useState(1)
+  const [totalPages] = useState(1)
   const [loading, setLoading] = useState(true);
   const [mobileFiltersopen, setMobileFiltersOpen] = useState(false)
 

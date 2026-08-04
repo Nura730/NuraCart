@@ -220,14 +220,14 @@ const ProductPage = () => {
                     className="text-sm text-app-success 
                 font-medium"
                   >
-                    ✔️ In Stock ({product.stock} available)
+                    🟢 In Stock ({product.stock} available)
                   </span>
                 ) : (
                   <span
                     className="text-sm text-app-error 
                 font-medium"
                   >
-                    ❌Out Of Stock
+                    🔴 Out Of Stock
                   </span>
                 )}
               </div>
